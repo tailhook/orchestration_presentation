@@ -10,14 +10,15 @@ commands:
     container: html5tools
     environ:
       PYTHONHASHSEED: 6
-      REVEAL_OPTS: "theme=white,\
+      REVEAL_OPTS: "theme=simple,\
         width=640,\
         height=480,\
         maxScale=10,\
-        margin=-0.3"
+        margin=0"
     run: |
       rst2html5 --jquery \
         --reveal-js \
         --reveal-js-opts $REVEAL_OPTS \
+        --stylesheet my.css \
         presentation.rst \
         > out/index.html
