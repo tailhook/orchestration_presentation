@@ -1,8 +1,14 @@
 .. role:: frag
    :class: fragment
 
+.. role:: frag-strike
+   :class: fragment strike
+
 .. role:: kill
    :class: kill
+
+.. role:: big-arrow
+   :class: big-arrow
 
 Orchestration
 =============
@@ -177,9 +183,9 @@ Lithos
 Lithos
 ======
 
-* No Downloading
-* No Build
-* No Network API
+* :kill:`Downloading`
+* :kill:`Build`
+* :kill:`Network API`
 
 Lithos
 ======
@@ -242,6 +248,17 @@ Cantal: Network
 * :frag:`Aggregated stats`
 
 
+Cantal
+======
+
+.. image:: resource_manager1.svg
+
+Cantal
+======
+
+.. image:: resource_manager2.svg
+
+
 Cantal: Rust
 ============
 
@@ -254,4 +271,145 @@ Cantal: Rust
 .. class:: fragment kill
 
    Debug build
+
+
+Verwalter
+=========
+
+Cluster-wide Scheduling
+
+
+Verwalter
+=========
+
+Metrics -> Config
+
+
+Verwalter
+=========
+
+
+.. class:: prodtable
+
++--------------+------+-----------------+
+| * 10 Django  | |->| | * jupyter 5D    |
+| *  1 Posgres |      | * mars 3D 1N    |
+| *  1 Nginx   |      | * pluto 2D 1P   |
++--------------+------+-----------------+
+
+.. |->| replace:: :big-arrow:`→`
+
+
+Verwalter
+=========
+
+========= =========== =========
+-         `<` 10K rpm > 10K rpm
+========= =========== =========
+Django    10          20
+Celery    5           2
+========= =========== =========
+
+
+Verwalter
+=========
+
+* :frag:`Inputs`
+* :frag:`Leader-Election`
+* :frag:`Monolithic Scheduler`
+* :frag:`Render`
+* :frag:`Web UI`
+
+
+Verwalter: Input
+================
+
+* :frag:`Metrics`
+* :frag:`Peers`
+* :frag:`UI Buttons`
+* :frag:`Prev. Schedules`
+
+
+Verwalter: Election
+===================
+
+.. class:: fragment
+
+    Raft-like protocol
+
+.. class:: fragment
+
+    No fsync
+
+.. class:: fragment
+
+    Low Traffic
+
+.. class:: fragment
+
+    :frag-strike:`Consistency`
+
+
+Verwalter: Lua
+==============
+
+* Side-Effect Free
+* Reproducible
+* Transformer
+
+
+Verwalter: Lua
+==============
+
+
+.. class:: prodtable
+
++--------------+------+-----------------+
+| * 10 Django  | |->| | * jupyter 5D    |
+| *  1 Posgres |      | * mars 3D 1N    |
+| *  1 Nginx   |      | * pluto 2D 1P   |
++--------------+      |                 |
+| 7.5K rpm     |      |                 |
++--------------+------+-----------------+
+
+Verwalter: Lua
+==============
+
+Monolithic scheduler
+
+
+Verwalter: Render
+=================
+
+.. class:: fragment
+
+   JSON
+
+.. class:: fragment
+
+   Handlebars -> ``nginx.conf``
+
+.. class:: fragment
+
+   ``nginx -t``
+
+.. class:: fragment
+
+   ``nginx -s reload``
+
+Verwalter: Feedback
+===================
+
+10 Djangos → 5 Running, 77 Err/sec → 1 min → Blacklist
+
+.. class:: fragment auto
+
+   :frag:`Met` → :frag:`Sch` → :frag:`Met` → :frag:`Sch`
+
+
+Overall
+=======
+
+.. image:: boxes.svg
+
 

@@ -16,6 +16,8 @@ commands:
         maxScale=10,\
         margin=0"
     run: |
+      mkdir out 2>/dev/null
+      cp *.svg out/
       rst2html5 --jquery \
         --reveal-js \
         --reveal-js-opts $REVEAL_OPTS \
