@@ -98,6 +98,12 @@ What we have?
 Vagga
 =====
 
+Containers for dev.env.
+
+
+Vagga
+=====
+
 .. code-block:: console
 
     $ git clone git@host:proj
@@ -144,10 +150,62 @@ Example 3
 Vagga
 =====
 
-* Documents commands
+* Self-documentation
 * IDE folders with deps
 * Versioning
 * Continuous Integration
+
+
+Lithos
+======
+
+Production grade containers
+
+Lithos
+======
+
+* Start process
+* Set up environment
+* Mount file systems
+* Restart on failure
+
+
+Lithos
+======
+
+* No Downloading
+* No Build
+* No Network API
+
+Lithos
+======
+
+Configuration files
+
+.. class:: fragment
+
+   introspection
+
+   security
+
+Lithos: Security
+================
+
+* :frag:`Sandbox config`
+* :frag:`Read-only/nosuid/noexec`
+* :frag:`Fixed command-line (*)`
+
+.. class:: fragment small
+
+    (*) You control only version and numer of instances
+
+Lithos: Day 0
+=============
+
+* Upgrade w/o restart
+* PID 1
+
+
 
 
 

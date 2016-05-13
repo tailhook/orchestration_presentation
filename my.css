@@ -5,3 +5,7 @@
 .strike {
     text-decoration: strikethrough;
 }
+
+.reveal p.small {
+    font-size: 70%;
+}
