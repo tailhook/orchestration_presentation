@@ -88,3 +88,66 @@ Requirements
 
 What we have?
 =============
+
+* vagga
+* lithos
+* cantal
+* verwalter
+
+
+Vagga
+=====
+
+.. code-block:: console
+
+    $ git clone git@host:proj
+    $ cd proj
+    $ vagga
+    Available commands:
+      run   Start app with postgres and redis
+      doc   Build docs with sphinx
+      test  Run unit tests
+      js    Compile javascripts
+
+
+Example 1 
+=========
+
+.. code-block:: console
+
+    $ vagga run
+    Okay, server started at http://localhost:8080
+
+
+Example 2
+=========
+
+.. code-block:: console
+
+    $ vagga doc
+    Installing sphinx
+    ...
+    Docs are built in doc/_build/html/index.html
+
+Example 3
+=========
+
+.. code-block:: console
+
+    $ git pull
+    $ vagga test
+    Requirements txt changed
+    Rebuilding container "test"
+    ................
+    Ok 20 successful
+
+Vagga
+=====
+
+* Documents commands
+* IDE folders with deps
+* Versioning
+* Continuous Integration
+
+
+
