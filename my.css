@@ -2,8 +2,8 @@
     list-style-type: none;
 }
 
-.strike {
-    text-decoration: strikethrough;
+.kill {
+    text-decoration: line-through;
 }
 
 .reveal p.small {

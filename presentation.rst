@@ -1,6 +1,9 @@
 .. role:: frag
    :class: fragment
 
+.. role:: kill
+   :class: kill
+
 Orchestration
 =============
 
@@ -159,7 +162,8 @@ Vagga
 Lithos
 ======
 
-Production grade containers
+Production-grade containers
+
 
 Lithos
 ======
@@ -202,10 +206,52 @@ Lithos: Security
 Lithos: Day 0
 =============
 
-* Upgrade w/o restart
-* PID 1
+* :frag:`Upgrade w/o restart`
+* :frag:`PID 1`
 
 
+Cantal
+======
+
+Monitoring
+
+Metrics
 
 
+Cantal
+======
+
+* :frag:`System metrics`
+* :frag:`CGroups`
+* :frag:`Application metrics`
+
+
+Cantal
+======
+
+* :frag:`2 sec scan interval`
+* :frag:`1 hour in-memory`
+* :frag:`Web UI`
+* :frag:`-> Carbon(graphite) -> Graphana`
+
+
+Cantal: Network
+===============
+
+* :frag:`Peer discovery`
+* :frag:`Aggregated stats`
+
+
+Cantal: Rust
+============
+
+.. class:: fragment
+
+   3k-10k metrics in 10-40ms
+
+   1h in 15-35MiB
+
+.. class:: fragment kill
+
+   Debug build
 
