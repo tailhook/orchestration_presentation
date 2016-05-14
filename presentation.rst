@@ -34,7 +34,7 @@ Orchestration
 =============
 
 * :frag:`Auto-Deployment`
-* :frag:`Scheduling`
+* :frag:`Scheduling / HW Sharing`
 * :frag:`Monitoring`
 * :frag:`Self-Healing`
 
@@ -51,9 +51,9 @@ Requirements
 Minimum Configuration
 =====================
 
+* :frag:`Upgrades`
 * :frag:`Only One Orchestration`
 * :frag:`Security`
-* :frag:`Duplication`
 
 
 Minimum Components
@@ -292,9 +292,9 @@ Verwalter
 .. class:: prodtable
 
 +--------------+------+-----------------+
-| * 10 Django  | |->| | * jupyter 5D    |
-| *  1 Posgres |      | * mars 3D 1N    |
-| *  1 Nginx   |      | * pluto 2D 1P   |
+| * 10 Django  | |->| | * jupyter 5D    |
+| *  1 Posgres |      | * mars 3D 1N    |
+| *  1 Nginx   |      | * pluto 2D 1P   |
 +--------------+------+-----------------+
 
 .. |->| replace:: :big-arrow:`→`
@@ -304,7 +304,7 @@ Verwalter
 =========
 
 ========= =========== =========
--         `<` 10K rpm > 10K rpm
+-         < 10K rpm   > 10K rpm
 ========= =========== =========
 Django    10          20
 Celery    5           2
@@ -365,11 +365,11 @@ Verwalter: Lua
 .. class:: prodtable
 
 +--------------+------+-----------------+
-| * 10 Django  | |->| | * jupyter 5D    |
-| *  1 Posgres |      | * mars 3D 1N    |
-| *  1 Nginx   |      | * pluto 2D 1P   |
+| * 10 Django  | |->| | * jupyter 5D    |
+| *  1 Posgres |      | * mars 3D 1N    |
+| *  1 Nginx   |      | * pluto 2D 1P   |
 +--------------+      |                 |
-| 7.5K rpm     |      |                 |
+| 7.5K rpm     |      |                 |
 +--------------+------+-----------------+
 
 Verwalter: Lua
@@ -400,7 +400,7 @@ Verwalter: Render
 Verwalter: Feedback
 ===================
 
-10 Djangos → 5 Running, 77 Err/sec → 1 min → Blacklist
+10 Djangos → 5 Running, 77 Err/sec → 1 min → Blacklist
 
 .. class:: fragment auto
 
