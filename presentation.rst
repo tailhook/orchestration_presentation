@@ -207,7 +207,7 @@ Lithos: Security
 
 .. class:: fragment small
 
-    (*) You control only version and numer of instances
+    (*) You control only version and number of instances
 
 Lithos: Day 0
 =============
