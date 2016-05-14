@@ -37,6 +37,6 @@
 .reveal table td[rowspan] {
     border: 0;
 }
-#overall h2 {
+.big-bg h2 {
     display: none;
 }

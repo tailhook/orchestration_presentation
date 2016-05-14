@@ -406,6 +406,7 @@ Verwalter: Feedback
 
    :frag:`Met` → :frag:`Sch` → :frag:`Met` → :frag:`Sch`
 
+.. class:: big-bg
 
 Overall
 =======
@@ -413,3 +414,26 @@ Overall
 .. image:: boxes.svg
 
 
+Plans
+=====
+
+* :frag:`Ship It`
+* :frag:`Dokku-like thing`
+* :frag:`HTTP Routing`
+
+Plans
+=====
+
+* :frag:`P2P File Sync`
+* :frag:`Multi-DC`
+
+.. class:: big-bg
+
+Multi-DC
+========
+
+.. image:: cross-data-center.svg
+
+
+Questions?
+==========
